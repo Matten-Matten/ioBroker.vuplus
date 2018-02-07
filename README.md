@@ -25,6 +25,9 @@ This adapter creates different states to control and monitor the vuplus box.
 
 ## Changelog
 
+### 0.1.1 (2018-02-07)
+* (Matten-Matten) add support for VU+ Port
+
 ### 0.1.0 (2017-10-04)
 * (bluefox) make adapter installable
 * (bluefox) add Volume control, Mute Toggle, Channel UP/DOWN
