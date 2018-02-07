@@ -111,7 +111,7 @@ function getResponse(command, deviceId, path, callback){
    // var device = dreamSettings.boxes[deviceId];
     var options = {
         host:    adapter.config.IPAddress,
-        port:    '80',
+        port:    adapter.config.Port,
         path:    path,
         method: 'GET'
     };
@@ -367,6 +367,7 @@ function checkStatus() {
 function main() {
     setConnection(false);
     adapter.log.debug('config IPAddress: ' + adapter.config.IPAddress);
+    adapter.log.debug('config Port: '      + adapter.config.Port);
     adapter.log.debug('config Username: '  + adapter.config.Username);
     adapter.log.debug('config Password: '  + adapter.config.Password);
 
@@ -379,6 +380,11 @@ function main() {
 
     if (adapter.config.IPAddress === '' || adapter.config.IPAddress === '0.0.0.0') {
         adapter.log.error('Please specify IP address');
+        return;
+    }
+	
+    if (adapter.config.Port === '' || adapter.config.Port === '00') {
+        adapter.log.error('Please specify Port');
         return;
     }
 
