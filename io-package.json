@@ -25,6 +25,7 @@
     },
     "native": {
         "IPAddress": "0.0.0.0",
+        "Port": "80",
         "Username": "",
         "Password": "",
         "PollingInterval": 5000
